@@ -1,0 +1,449 @@
+*{
+    margin:0;
+    font-family: Arial;
+    border:border-box;
+}
+
+
+/* 2) making m - 0 for reset default values and setting font-family */
+/* Setting the box-sizing property to border-box in CSS affects how the width and height of an element are calculated. When you set box-sizing: border-box, the padding and border of the element are included in the specified width and height, rather than being added to them.
+
+Here's what happens when you set box-sizing: border-box:
+
+Content Width: The width of the content box (i.e., the inner width of the element) includes padding and border widths.
+
+Total Width: The total width of the element (including padding and border) is the same as the specified width.
+
+Margin: The margin of the element is still calculated outside of the specified width, unaffected by box-sizing: border-box. */
+
+/* 3) styling for navbar height to 60px by inspecting,bg-color,color*/
+.navbar{
+    height:60px;
+    background-color: #0f1111;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo{
+    height:50px;
+    width: 100px;
+}
+
+.logo{
+    background-image: url("./images/amazon_logo.png");
+    height: 50px;
+    width: 100%;
+    background-size: cover;
+}
+
+/* 4) b-image is not visible becz we have set bg-image of div and it will be visible only when we set height and width of it */
+/* 5) so set height and width for nav-logo and logo classes it is 50px by inspecting*,bg-size to cover/
+
+/* info- When you set background-size: cover, it instructs the browser to scale the background image as large as possible while ensuring that both its width and height cover the entire container. 
+This means that the background image will be stretched or cropped as necessary to fill the entire background area without distorting its aspect ratio. */
+
+/* 6) we are getting a box type whenever we hover on amazon logo and few other icons , we will do it by giving class border to nav-logo class , in which a transparent border means its clr will be color bg is set*/
+
+.border{
+    border:1.5px transparent;
+    border-radius: 3px;
+
+}
+/* 7) when we hover on icon color of icon border should chage from transparent to white*/
+.border:hover{
+    border:1.5px solid white;
+
+}
+/* 9) as of now nav-address and add-icon are down to logo to make it along same line dis:flex*/
+
+/*box2 styling */
+/* 11) setting colors of two text ,first one to #cccccc, second is white so no need to set,and also font-sizes of both in rem(according to root) */
+.add-first{
+    color:#cccccc;
+    font-size:.85rem;
+    margin-left: 15px;
+}
+
+.add-second{
+    font-size: 1;
+    margin-left: 3px;
+}
+/* 12) to make the icon and India text on same line give dis:flex to add-icon class*/
+.add-icon{
+    display: flex;
+    /* align-items: center; */
+    
+}
+/* 13) by inspecting deliver text is started after icon so give m-l to  add-first,15px it is font-size of icon*/
+/* 14) give some m-l to add-second class also */
+/* 15) to make whole icon and two texts to center give align-items center in class navbar*/
+/* 15) add border class to nav-address also*/
+
+.nav-address{               /*me*/
+    padding: 7px;
+}
+
+/*box-3 styling  */
+/* 16) bringing on same line by dis:flex */
+/* 17) add class to select  and input in nav-search as search-select and search_input*/
+/* 18) setting wid and hei to nav-search by inspecting it is nearly 625px  and height to 40px*/
+/* 19)  by inspecting it is a bit curved at corners so give border-radius */
+/* 20) right corners became curved but left side corners are same */
+.nav-search{
+    display: flex;
+    background-color: pink;     /*just for understanding the  thngs as of now*/
+    width: 800px;
+    height: 40px;
+    border-radius: 3px;
+    justify-content: space-evenly;
+}
+
+/* 21) so give same radius to search-select along with bg-color by inspeccting it is #f3f3f3*/
+/* 22)  width of search-select by inspecting is 45px and 5 px padding, nearly 1 px border is given*/
+/* 23) text All is at center so text-align */
+/* 24) b-r is seen only on  left side in  actual website so change b-r to b-t-l-r and b-b-l-r and see changes*/
+/* 25) remove by default border of select  as it not visible on right side by setting it to none*/
+/* 26) to make input,select,search icon get equally spread give j-c:space-evenly to nav-search*/ 
+.search-select{
+    background-color: #f3f3f3;
+    /* border-radius: 4px; */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 50px;
+    text-align: center;
+    border:none;
+
+}
+
+/* styling for search input */
+/* 27) width of s-i is nearly 545px by inspecting  so give it or give it 100% so after giving sizing to select and search icon the remaining will be allocated to input*/
+/* 28) give font to text in input and  remove by default border of input by border:none and see changes*/
+
+
+
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border:none;
+}
+
+/* 29) next styling of search icon */
+/* 30) give width as 45px to it by inspecting ,to make icon center give dis:flex and j-c:center for horizantal and for making vertically center give align-items*/
+/* 31) increase size of search icon and set bg-color to it as febd6 */
+/* 32) making top-right and bottom-right corners to curved and setting color of icon to #0f1111 */
+.search-icon{
+    width:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color:#0f1111;
+}
+
+/* 33)  giving equal spacing to elements in navbar by setting j-c:space-evenly in navbar class*/
+
+
+/* box-4 styling */
+/* 35) font-size of texts in box4 and box 5 are same create classes that can be added for both conatiner and give font-sizes 0.75rem and .85rem */
+/* 36) by inspecting we can see that a font-weight is also given to account and lists text in nav-sec class */
+span{
+    font-size:0.75rem;
+    font-weight: 500;
+}
+.nav-sec{
+    font-size: 0.85rem;
+    font-weight: 700;
+
+}
+
+/* 39) by clicking on search bar in amazon website we are getting a orange like color around it , so we can do it apply appropriate styling to nav-search*/
+.nav-search:hover{
+    border: 2.5px solid orange;
+}
+
+/* 41)styling fo last box i.e cart in navbar */
+/* 42)cart icon symbol is large and cart text is small by inspecting,so set appropriate sizing for it*/
+.nav-cart i{        /**/
+    font-size: 30px;
+}
+
+.nav-cart{
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 8px;
+}
+
+.nav-return{
+    padding: 7px;
+}
+
+.nav-signin{
+    padding: 7px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.nav-country img{
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+}
+
+.nav-country{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+   
+.nav-country i{
+    margin-left: 2px;
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+.nav-country{
+    padding: 7px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* styling for panel */
+/* 49) by inspecting bg-color and height of panel is #232f3e or #222f3d and height is 40px*/
+/* 50) removing color of links by text-decoration */
+/* 51_align it to center vertically by align-items:center and to align horiznatly use j-c:s-e */
+/* 52) we can see that the 2nd div in panel i.e panel-opts took most of width of panel by inspecting  so set it with appro width(70%)*/
+/* 53) font-size of text in panel is 14px with f-w for text all and text is pane;-deals is 700 by insepcting */
+/* 54) give approp spacing to panel-opts by m-l to 15px */
+
+
+.panel{
+    height: 40px;
+    /* background-color: #232f3e; */
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    /* justify-content: space-around; */
+    padding-left: 11px;
+}
+.panel-all{
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding:8px 9px;
+}
+.panel a{
+    text-decoration: none;
+    color: white;   
+    padding:8px 9px;
+    margin:5px 0 6px 0;
+}
+
+.panel-opts{
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+/* hero section */
+/* 56)giving bg-image to hero-section */
+/* 57) the img can't be seen as of now becz we have not gave height and width for hero-section class,so specifying it by inspecting values are h-600 */
+.hero-section{
+    background-image: url('./images/hero_image.jpg');
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* 59) speciftying bg-color for hero-msg , text-color, height of it which is appro 20px by inspecting*/
+/* 60) do bring text in paragraph in center give dis:flex to hero-msg and use align-items and j-c */
+/* 61)sizing of text is 14px  and color of clickable text is #007185*/
+/* 62) to place hero-msg div on correct place (a bit bottom of hero-section div) give dis:flex to hero-section,specify the width of hero-msg div by inspecting it is appro 80% or 1200px of total width ,j-c:center , align-items:end */
+/* 63) specify margin-bottom to the hero-msg div */
+/* 64) decreasing height of hero-section by inspecting it is  250px so giving 300px*/
+.hero-msg{
+    background-color: #f5f6f6;
+    color: black;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    position: relative;
+    width: 1200px;
+    margin-bottom: 25px;
+    padding: 10px 14px;
+
+}
+
+.hero-msg a{
+    color:#007185;
+}
+
+/* 65) styling for boxes in shop-section */
+/* 66) specfying border for boxes temoprarily for getting viewed ,width and height as 292px and 420px */
+/* 67) to bring atmost 4 boxes on same line give dis:flex to there container i.shop-section */
+/* 68) as we can see by inspecting there is some even space between the boxes and before and end of box so for this use j-c:space-evenly */
+/* 69) specfying bg-color for boxes and also the bg-color for space behind boxes */
+
+
+.box{
+    width: 23%;
+    height: 400px;
+    /* border: 1px solid black; */
+    background-color: white;
+    padding: 20px 0 15px;
+    margin-top:15px;
+}
+
+.shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    flex-wrap: wrap;
+}
+
+/* 71) set height and width for box-img class and padding for boxes 20px 0 15px by inspecting in bpx class */
+/* 72)specfying margin-l and margin-right for box-content and  marign-top for box class*/
+/* 73) the background-image box is repeating after certain point so set it to no-repeat and to cover */
+/* 74) set margin for image from top  */
+.box-img{
+    height: 310px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content{
+    margin-left: 1rem;
+    margin-right:1rem;
+}
+
+.shop-section a{
+    text-decoration: none;
+    color:#007185;
+}
+.shop-section a:hover{
+    text-decoration: chocolate underline;
+    color: chocolate;
+}
+
+/* 76) to wrap the boxes after a certain limit use flex-wrap in shop-section class  */
+
+/* 78) styling for footer-panel1  */
+/* 79) bg-color ,height of them are #37475a,50px*/
+/* 80)to make contents to center give dis:flex, */
+/* 81)we can see that there is space before the footer so give some margin-top to footer */
+
+
+
+footer{
+    margin-top:15px;
+}
+.foot-panel1{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* 80)styling for foot-panel2 ,color- #222f3d,color to white,width to 320px by inspecting*/
+/* 81) we want all ul to appear on same line give dis:flex to parent container i.e foot-panel2 and j-c:s-e  */
+/* 82) size of <a> is small on acutal website so giving it 14px by inspecting */
+
+.foot-panel2{
+    background-color: #222f3d;
+
+}
+.foot-panel2-content{
+    background-color: #222f3d;
+    color: white;
+    height: 320px;
+    max-width: 1000px;
+    margin:0 140px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.foot-panel2-content ul a{
+    text-decoration: none;
+    color:#dddddd;
+    display: block; /*to display one on each line or separately*/
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+
+    
+}
+
+.foot-panel2-content ul{
+    width: 150px;
+    height: 320px;
+    padding:0px 10px;
+    margin-top:20px;
+}
+
+.foot-panel2-content p{
+    margin: 6px 0 14px 0;
+}
+
+
+/* 84)styling for foot-panel3, bg-color is same, to show white line use  border-top property ,height as 70px by inspecting*/
+/* 85) adding logo img to logo class as bg-image, giving dis:flex to  to its parent i.e  foot-panel3 */
+.foot-panel3{
+    background-color: #222f3d;
+    color:white;
+    border-top: 0.5px solid #3a4553;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    background-image: url("./images/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+}
+
+/* 87) styling got foot-panel4  ,bg-color is #131A22 , to make elements center use dis:flex ,j-c:center */
+.foot-panel4{
+    background-color: #131A22;
+    color:white;
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 40px;
+    padding: 10px 0 30px 0;
+    text-align: center;
+
+}
+
+.foot-panel4 a{
+    text-decoration: none;
+    color: white;
+    
+    
+}
+.foot-panel4:hover{
+    text-decoration: 1px solid underline white;
+}
+
+/* set font-size for foot-pages and copyright,to make text center use text-align center */
+
+.foot-pages{
+    font-size: 0.75rem;
+    /* text-align: center; */
+
+}
+
+.copyright{
+    /* text-align: center; */
+    font-size: 0.85rem;
+    padding-top: 5px;
+}
